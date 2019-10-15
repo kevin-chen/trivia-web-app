@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9a13ccb-8582-4407-af25-70917c6e32df" name="Default Changelist" comment="" />
+    <list default="true" id="b9a13ccb-8582-4407-af25-70917c6e32df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/settings.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -67,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django_project/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="633">
+              <caret line="112" column="15" lean-forward="true" selection-start-line="112" selection-start-column="15" selection-end-line="112" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -118,19 +120,12 @@
       <list>
         <option value="$PROJECT_DIR$/django_project/urls.py" />
         <option value="$PROJECT_DIR$/trivia/urls.py" />
-        <option value="$PROJECT_DIR$/django_project/settings.py" />
         <option value="$PROJECT_DIR$/trivia/templates/trivia/about.html" />
         <option value="$PROJECT_DIR$/trivia/templates/trivia/base.html" />
         <option value="$PROJECT_DIR$/trivia/views.py" />
         <option value="$PROJECT_DIR$/trivia/templates/trivia/home.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/django_project/settings.py" />
       </list>
     </option>
   </component>
@@ -157,24 +152,6 @@
               <item name="django_project" type="462c0819:PsiDirectoryNode" />
               <item name="django_project" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="django_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django_project" type="462c0819:PsiDirectoryNode" />
-              <item name="trivia" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django_project" type="462c0819:PsiDirectoryNode" />
-              <item name="trivia" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="django_project" type="462c0819:PsiDirectoryNode" />
-              <item name="trivia" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="trivia" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -183,6 +160,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -213,7 +191,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19831224" />
@@ -249,13 +226,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="18" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_project/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
@@ -314,6 +284,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_project/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="112" column="15" lean-forward="true" selection-start-line="112" selection-start-column="15" selection-end-line="112" selection-end-column="15" />
         </state>
       </provider>
     </entry>
