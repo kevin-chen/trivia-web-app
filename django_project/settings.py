@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '801yjdt#5-^j+0)dhtcgh0-r!k_&i(d7o+-w!@0#-9hwyd+d9%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True # False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['trivia-capital-one.herokuapp.com']
 
 
 # Application definition
