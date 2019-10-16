@@ -1,5 +1,5 @@
 # Capital One Trivia Web App
-<img src="assests/co.png" width=400><br>
+<img src="trivia/templates/trivia/assets/co.png" width=400><br>
 
 Building a web app to find trivia questions by category
 
