@@ -6,12 +6,16 @@ posts = [{'a':4}, {'b':3}, {'c':2}]
 
 # Create your views here.
 def home(request):
-    # request = 'http://jservice.io/api/random'
-    # response = urllib.request.urlopen(request).read()
-    # random_trivia = json.loads(response.decode('utf-8'))
+    req = 'http://jservice.io/api/random'
+    response = urllib.request.urlopen(req).read()
+    random_trivia = json.loads(response.decode('utf-8'))[0]
     # return HttpResponse(random_trivia)
-    return render(request, 'trivia/home.html')
+    title = random_trivia['category']['title']
+    context = {'question' : random_trivia['question'],
+               'answer' : random_trivia['answer'],
+               'title' : title}
+    return render(request, 'trivia/home.html', context)
 
 def about(request):
-    context = {'posts':posts, 'title':'About'}
+    context = {'posts':posts, 'title':'Hello'}
     return render(request, 'trivia/about.html', context)

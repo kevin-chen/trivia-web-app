@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="assets/trivia.jpg">
     {% if title %}
-        <title>Title - {{ title }}</title>
+        <title>Trivia App - {{ title }}</title>
     {% else %}
-        <title>Random Title</title>
+        <title>Trivia App</title>
     {% endif %}
+
 </head>
 <body>
     {% block content %} {% endblock %}
