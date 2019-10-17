@@ -2,6 +2,15 @@
 
 {% block content %}
 
+    Search for a Trivia:
+    <form action="/category" method="post">
+<!--        <input type="text" name="category" class="form-control" placeholder="Search" />-->
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2> {{ text }} </h2>
 
 
 {% endblock content %}
