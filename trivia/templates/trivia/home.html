@@ -11,26 +11,42 @@
     <!-- Main Content -->
     <!-- Cards -->
     <div class="card-columns mb-3 text-center">
-
         {% for triv in trivia %}
             <div class="card border-dark mb-3">
-              <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Trivia #{{ triv.id }}</h4>
-              </div>
-              <div class="card-body text-dark">
-                <h1 class="card-title pricing-card-title">{{ triv.question }}</h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li></li>
-                  <li>{{ triv.answer }}</li>
-                  <li></li>
-                  <li></li>
-                </ul>
-                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Learn More</button>
-              </div>
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Trivia #{{ triv.id }}</h4>
+                </div>
+                <div class="card-body text-dark">
+                    <h1 class="card-title pricing-card-title"></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li></li>
+                    </ul>
+
+                    <!-- Flipping Card -->
+                    <div class="flip-card mb-3 container" >
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <strong>Question:</strong>
+                                <br>
+                                {{ triv.question }}
+                            </div>
+                            <div class="flip-card-back">
+                                <strong>Answer:</strong>
+                                <br>
+                                {{ triv.answer }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="https://www.google.com/search?q=apple">
+                        <button type="submit" class="btn btn-lg btn-block btn-outline-primary">Learn More</button>
+                    </form>
+
+                </div>
             </div>
+
         {% endfor %}
     </div>
 
 
 {% endblock content %}
-

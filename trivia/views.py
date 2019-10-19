@@ -4,12 +4,12 @@ from trivia.forms import CategoryForm
 import requests
 
 def home(request):
-    req = 'http://jservice.io/api/random?count=10'
+    req = 'http://jservice.io/api/random?count=12'
     response = requests.get(req)
     trivia_set = response.json()
     content = []
     for trivia in trivia_set:
-        dict = { 'id': trivia['id'], 'question' : trivia['question'], 'answer' : trivia['answer'] }
+        dict = { 'id': trivia['id'], 'question' : trivia['question'], 'answer' : trivia['answer'], 'category' : trivia['category']['title'] }
         content.append(dict)
     return render(request, 'trivia/home.html', {'trivia' : content})
 
