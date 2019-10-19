@@ -22,6 +22,10 @@
                         <li></li>
                     </ul>
 
+                    <script>
+                        function isTouchDevice() {return !!('ontouchstart' in window) || !!('msmaxtouchpoints' in window.navigator);};
+                    </script>
+
                     <!-- Flipping Card -->
                     <div class="flip-card mb-3 container" >
                         <div class="flip-card-inner">
@@ -38,8 +42,8 @@
                         </div>
                     </div>
 
-                    <form action="https://www.google.com/search?q=apple">
-                        <button type="submit" class="btn btn-lg btn-block btn-outline-primary">Learn More</button>
+                    <form id="myForm" action="{{category}}">
+                        <input class="btn btn-lg btn-block btn-outline-primary" type="button" value="Learn More" onclick="window.open('https://www.google.com/search?q=trivia category {{triv.category}}')" />
                     </form>
 
                 </div>
