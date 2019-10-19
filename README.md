@@ -5,7 +5,7 @@ Building a web app to find trivia questions by category
 
 To complete this challenge, build a web application that:
 * has a search function that displays results in an intuitive, responsive, mobile friendly, easy to navigate interface.
-* gives users the ability to refine search results by: 
+* gives users the ability to refine search results by:
   * date or timeframe aired (you can search by a day,  a week, a month)
   * trivia category
   * level of difficulty of the question

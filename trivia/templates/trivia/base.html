@@ -2,78 +2,71 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <link rel="icon" href="https://images-na.ssl-images-amazon.com/images/I/51Nf7DSjczL.png">
+    <head>
+        <!-- Icon Picture and CSS Stylesheet-->
+        <link rel="icon" href="https://images-na.ssl-images-amazon.com/images/I/51Nf7DSjczL.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Optional meta tags -->
+        <meta name="description" content="Trivia Web App for Capital One">
+        <meta name="author" content="Kevin Chen and Bootstrap contributors">
+        <meta name="generator" content="Jekyll v3.8.5">
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'trivia/main.css' %}">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/pricing/">
 
-    <!-- Title -->
-    {% if title %}
-        <title>Trivia App</title>
-    {% else %}
-        <title>Trivia App</title>
-    {% endif %}
-</head>
+        <!-- Main CSS -->
+        <link rel="stylesheet" type="css" href="{% static 'trivia/main.css' %}">
 
-<body>
-    <!-- Navigation Bar -->
-    <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark navbar-color fixed-top">
+        <!-- Title -->
+        {% if title %}
+            <title>Trivia App</title>
+        {% else %}
+            <title>Trivia App</title>
+        {% endif %}
+    </head>
+
+    <body>
+
+        <!-- Navigation Header -->
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+            <a href="{% url 'trivia-home' %}"><img src="https://img.icons8.com/plasticine/100/000000/questions.png" style="width:50px; height:60px"></a>
+            <h5 class="my-0 mr-md-auto font-weight-normal"><strong>Trivia Me This</strong></h5>
+                <nav class="my-2 my-md- mr-md-3">
+                    <a class="p-2 text-dark" href="{% url 'trivia-random' %}">Random Trivia</a>
+                    <a class="p-2 text-dark" href="{% url 'trivia-search' %}">Search by Category</a>
+                </nav>
+            <a class="btn btn-outline-primary" href="http://jservice.io/">JServio.io</a>
+        </div>
+
+        <!-- Block Content -->
         <div class="container">
-          <a class="navbar-brand mr-4" href="/">Trivia Me This</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarToggle">
-            <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="{% url 'trivia-home' %}">Home</a>
-              <a class="nav-item nav-link" href="{% url 'trivia-random' %}">Random Trivia</a>
-            </div>
-<!--            &lt;!&ndash; Navbar Right Side &ndash;&gt;-->
-<!--            <div class="navbar-nav">-->
-<!--              <a class="nav-item nav-link" href="#">Login</a>-->
-<!--              <a class="nav-item nav-link" href="#">Register</a>-->
-<!--            </div>-->
-          </div>
+            {% block content %}{% endblock %}
         </div>
-      </nav>
-    </header>
 
-    <!-- Block Content -->
-    <main role="main" class="container">
-      <div class="row">
-        <div class="col-md-8">
-          {% block content %}{% endblock %}
+        <!-- Footer -->
+        <div class="container">
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+            <!-- **************************** Footer ****************************** -->
+            <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <small class="d-block mb-3 text-muted">&copy; Kevin Chen 2019</small>
+                    </div>
+                </div>
+            </footer>
         </div>
-<!--        <div class="col-md-4">-->
-<!--          <div class="content-section">-->
-<!--            <h3>Our Sidebar</h3>-->
-<!--            <p class='text-muted'>You can put any information here you'd like.-->
-<!--              <ul class="list-group">-->
-<!--                <li class="list-group-item list-group-item-light">Latest Posts</li>-->
-<!--                <li class="list-group-item list-group-item-light">Announcements</li>-->
-<!--                <li class="list-group-item list-group-item-light">Calendars</li>-->
-<!--                <li class="list-group-item list-group-item-light">etc</li>-->
-<!--              </ul>-->
-<!--            </p>-->
-<!--          </div>-->
-<!--        </div>-->
-      </div>
-    </main>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-
+    </body>
 </html>

@@ -1,0 +1,25 @@
+{% extends "trivia/base.html" %}
+
+{% block content %}
+
+    <!-- Success Notification -->
+    <div>
+        {% if success %}
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Success!</strong> Found Category
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Searching-->
+    Search for a Trivia:
+    <form action="/category" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2> {{ text }} </h2>
+
+{% endblock content %}
