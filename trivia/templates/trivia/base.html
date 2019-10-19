@@ -50,9 +50,18 @@
           <!--box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);-->
         }
 
-        .flip-card:active .flip-card-inner {
+        @media(hover: hover) {
+            .flip-card:hover .flip-card-inner {
           transform: rotateY(180deg);
+            }
         }
+
+        @media(hover: none) {
+            .flip-card:active .flip-card-inner {
+          transform: rotateY(180deg);
+            }
+        }
+
 
         .flip-card-front, .flip-card-back {
           position: absolute;

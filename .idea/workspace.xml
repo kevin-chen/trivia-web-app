@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a13ccb-8582-4407-af25-70917c6e32df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trivia/templates/trivia/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/trivia/templates/trivia/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trivia/templates/trivia/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/trivia/templates/trivia/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,20 +21,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trivia/templates/trivia/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+            <state relative-caret-position="525">
+              <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trivia/templates/trivia/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="78" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="78" />
+            <state relative-caret-position="328">
+              <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -102,10 +101,10 @@
         <option value="$PROJECT_DIR$/trivia/templates/trivia/base2.html" />
         <option value="$PROJECT_DIR$/trivia/templates/trivia/search.html" />
         <option value="$PROJECT_DIR$/trivia/urls.py" />
-        <option value="$PROJECT_DIR$/trivia/templates/trivia/base.html" />
         <option value="$PROJECT_DIR$/trivia/views.py" />
         <option value="$PROJECT_DIR$/trivia/templates/trivia/home.html" />
         <option value="$PROJECT_DIR$/trivia/templates/trivia/css/app.css" />
+        <option value="$PROJECT_DIR$/trivia/templates/trivia/base.html" />
       </list>
     </option>
   </component>
@@ -353,16 +352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trivia/templates/trivia/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="78" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="78" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trivia/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -389,8 +378,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trivia/templates/trivia/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+        <state relative-caret-position="525">
+          <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trivia/templates/trivia/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
