@@ -26,7 +26,7 @@
 
         <!-- Title -->
         {% if title %}
-            <title>Trivia Me This - {title}</title>
+            <title>Trivia Me This - {{title}}</title>
         {% else %}
             <title>Trivia Me This</title>
         {% endif %}
@@ -91,10 +91,14 @@
             <a href="{% url 'trivia-home' %}"><img src="https://img.icons8.com/plasticine/100/000000/questions.png" style="width:50px; height:60px"></a>
             <h5 class="my-0 mr-md-auto font-weight-normal"><strong>Trivia Me This</strong></h5>
                 <nav class="my-2 my-md- mr-md-3">
-                    <a class="p-2 text-dark" href="{% url 'trivia-home' %}">Random Trivia</a>
+                    <!--<a class="p-2 text-dark" href="{% url 'trivia-home' %}">Random Trivia</a>-->
                     <a class="p-2 text-dark" href="{% url 'trivia-search' %}">Search by Category</a>
                 </nav>
-            <a class="btn btn-outline-primary" href="http://jservice.io/">JService.io</a>
+                <nav class="my-2 my-md- mr-md-3">
+                    <a class="btn btn-outline-primary" href="http://jservice.io/">JService.io</a>
+                    <a class="btn btn-outline-primary" href="https://github.com/kevin-chen/trivia-web-app">GitHub</a>
+                </nav>
+
         </div>
 
         <!-- Block Content -->

@@ -14,15 +14,25 @@ def home(request):
     return render(request, 'trivia/home.html', {'trivia' : content})
 
 def search(request):
+    # Search Box
     if request.method == 'POST':
         form = CategoryForm(request.POST)
         if form.is_valid():
             text = form.cleaned_data
             print(text['category'])
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/search')
     else:
         form = CategoryForm()
-    return render(request, 'trivia/search.html', {'form': form})
+
+    # Category List
+    req = "http://jservice.io/api/categories?count=100"
+    response = requests.get(req)
+    category_set = response.json()
+    content = []
+    for category in category_set:
+        dict = {'title': category['title']}
+        content.append(dict)
+    return render(request, 'trivia/search.html', {'form': form, 'categories' : content, 'success' : True})
 
 def random(request):
     req = 'http://jservice.io/api/random'

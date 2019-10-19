@@ -13,13 +13,20 @@
     </div>
 
     <!-- Searching-->
-    Search for a Trivia:
-    <form action="/category" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit</button>
-    </form>
+    <div class="container text-center">
+        Search for a Trivia:
+        <form action="/search" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
-    <h2> {{ text }} </h2>
+    <!-- List of Categories -->
+    <ul>
+        {% for category in categories %}
+            <li>{{category.title}}</li>
+        {% endfor %}
+    </ul>
 
 {% endblock content %}
