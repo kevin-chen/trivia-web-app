@@ -2,31 +2,29 @@
 
 {% block content %}
 
-    <!-- Success Notification -->
-    <div>
-        {% if success %}
-            <div class="alert alert-success alert-dismissible" role="alert">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong>Success!</strong> Found Category
-            </div>
-        {% endif %}
-    </div>
-
     <!-- Searching-->
     <div class="container text-center">
-        Search for a Trivia:
+        <h5 class="display-4">Search for a Category:</h5>
         <form action="/search" method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Submit</button>
+            <button class="btn btn-outline-primary" type="submit">Submit</button>
         </form>
     </div>
 
+    <br>
+
     <!-- List of Categories -->
+    <div class="container outer">
     <ul>
         {% for category in categories %}
-            <li>{{category.title}}</li>
+        <li>
+            <form action="/random" method="post">
+                <a href="search/{{category.id}}">{{category.title}}</a>
+            </form>
+        </li>
         {% endfor %}
     </ul>
+        </div>
 
 {% endblock content %}

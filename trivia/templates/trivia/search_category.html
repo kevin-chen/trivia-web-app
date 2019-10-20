@@ -2,30 +2,31 @@
 
 {% block content %}
 
+    <!-- Success Notification -->
+    <div>
+        {% if success %}
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Success!</strong> Found Category Questions
+            </div>
+        {% endif %}
+    </div>
+
+
     <!-- Intro Heading -->
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-4">Welcome to Trivia</h1>
-        <p class="lead">Play our trivia game: solve a random trivia or search by category</p>
+        <h1 class="display-4">Trivia for {{category}}</h1>
     </div>
 
     <!-- Main Content -->
     <!-- Cards -->
     <div class="card-columns mb-3 text-center">
-        {% for triv in trivia %}
+        {% for ques in questions %}
             <div class="card border-dark mb-3">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Trivia #{{ triv.id }}</h4>
+                    <h4 class="my-0 font-weight-normal">Trivia #{{ ques.id }}</h4>
                 </div>
                 <div class="card-body text-dark">
-
-                    <!-- Category -->
-                    <div class="cursive">
-                        <strong>Category:</strong>
-                        <br>
-                        {{ triv.category}}
-                    </div>
-
-                    <br>
 
                     <!-- Flipping Card -->
                     <div class="flip-card mb-3 container" >
@@ -33,19 +34,18 @@
                             <div class="flip-card-front">
                                 <strong>Question:</strong>
                                 <br>
-                                {{ triv.question }}
+                                {{ ques.question }}
                             </div>
                             <div class="flip-card-back">
                                 <strong>Answer:</strong>
                                 <br>
-                                {{ triv.answer }}
+                                {{ ques.answer }}
                             </div>
                         </div>
                     </div>
 
-
                     <form id="myForm">
-                        <input class="btn btn-lg btn-block btn-outline-primary" type="button" value="Learn More" onclick="window.open('https://www.google.com/search?q={{triv.answer}}')" />
+                        <input class="btn btn-lg btn-block btn-outline-primary" type="button" value="Learn More" onclick="window.open('https://www.google.com/search?q={{ques.answer}}')" />
                     </form>
 
                 </div>
