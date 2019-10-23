@@ -5,7 +5,7 @@
     <!-- Searching-->
     <div class="container text-center">
         <h5 class="display-4">Search for a Category:</h5>
-        <form action="/search" method="post">
+        <form action="/search/" method="post">
             {% csrf_token %}
             {{ form.as_p }}
             <button class="btn btn-outline-primary" type="submit">Submit</button>
@@ -20,7 +20,7 @@
         {% for category in categories %}
         <li>
             <form action="/random" method="post">
-                <a href="search/{{category.id}}">{{category.title}}</a>
+                <a href="/category/{{category.id}}">{{category.title}}</a>
             </form>
         </li>
         {% endfor %}
