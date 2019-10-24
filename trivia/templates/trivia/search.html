@@ -4,7 +4,7 @@
 
     <!-- Searching-->
     <div class="container text-center">
-        <h5 class="display-4">Search for a Category:</h5>
+        <h5 class="display-4">Search for a Trivia:</h5>
         <form action="/search/" method="post">
             {% csrf_token %}
             {{ form.as_p }}
@@ -16,15 +16,17 @@
 
     <!-- List of Categories -->
     <div class="container outer">
-    <ul>
-        {% for category in categories %}
-        <li>
-            <form action="/random" method="post">
-                <a href="/category/{{category.id}}">{{category.title}}</a>
-            </form>
-        </li>
-        {% endfor %}
-    </ul>
-        </div>
+        <ul>
+            {% for category in categories %}
+            <li>
+                <form action="/random" method="post">
+                    <a href="/category/{{category.id}}">{{category.title}}</a>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Trivia Cards -->
 
 {% endblock content %}
