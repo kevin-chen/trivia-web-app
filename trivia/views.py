@@ -6,7 +6,7 @@ import random as ran
 import re
 
 TAG_RE = re.compile(r'<[^>]+>')
-# dance for me
+
 def home(request):
     req = 'http://jservice.io/api/random?count=12'
     response = requests.get(req)
@@ -54,7 +54,7 @@ def search_trivia(request, text):
             response = requests.get(req)
             category_set = response.json()
 
-            if offset >= 100: # change to get more categories
+            if offset >= 1000: # change to get more categories
                 break
 
             # Find right category
