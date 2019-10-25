@@ -1,7 +1,7 @@
 # Capital One Trivia Web App
 <img src="trivia/templates/trivia/assets/co.png" width=400><br>
 
-Building a web app to find trivia questions by category
+Building a web app to find trivia questions by category, time, and difficulty
 
 To complete this challenge, build a web application that:
 * has a search function that displays results in an intuitive, responsive, mobile friendly, easy to navigate interface.

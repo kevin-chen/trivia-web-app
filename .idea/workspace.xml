@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9a13ccb-8582-4407-af25-70917c6e32df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/trivia/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/trivia/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trivia/templates/trivia/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/trivia/templates/trivia/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trivia/templates/trivia/random.html" beforeDir="false" afterPath="$PROJECT_DIR$/trivia/templates/trivia/random.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trivia/templates/trivia/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/trivia/templates/trivia/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trivia/templates/trivia/trivia.html" beforeDir="false" afterPath="$PROJECT_DIR$/trivia/templates/trivia/trivia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trivia/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/trivia/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trivia/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/trivia/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="b9a13ccb-8582-4407-af25-70917c6e32df" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trivia/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+            <state relative-caret-position="-98">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -469,8 +461,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trivia/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+        <state relative-caret-position="-98">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
