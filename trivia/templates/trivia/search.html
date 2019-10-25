@@ -2,31 +2,29 @@
 
 {% block content %}
 
-    <!-- Searching-->
     <div class="container text-center">
+
+         <!-- Searching-->
         <h5 class="display-4">Search for a Trivia:</h5>
         <form action="/search/" method="post">
             {% csrf_token %}
             {{ form.as_p }}
             <button class="btn btn-outline-primary" type="submit">Submit</button>
         </form>
-    </div>
 
-    <br>
+        <br>
 
-    <!-- List of Categories -->
-    <div class="container outer">
-        <ul>
+        Sample Categories:
+
+        <!-- List of Categories -->
+         <ul>
             {% for category in categories %}
-            <li>
                 <form action="/random" method="post">
                     <a href="/category/{{category.id}}">{{category.title}}</a>
                 </form>
-            </li>
             {% endfor %}
         </ul>
-    </div>
 
-    <!-- Trivia Cards -->
+    </div>
 
 {% endblock content %}

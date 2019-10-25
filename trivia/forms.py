@@ -1,7 +1,14 @@
 from django import forms
 
 class CategoryForm(forms.Form):
+    FRUIT_CHOICES = [
+        ('easy', 'Easy'),
+        ('medium', 'Medium'),
+        ('hard', 'Hard')
+    ]
+
     # category is the dictionary name and the form variable name
-    category = forms.CharField(label='', max_length=100, required=False)
+    category = forms.CharField(label='', max_length=100, required=False, widget=forms.TextInput(attrs={'placeholder': 'Category'}))
+    difficulty = forms.CharField(label='Difficulty Level', widget=forms.Select(choices=FRUIT_CHOICES))
     #time = # FIX THIS ADD TIME Field dropdown
     #difficulty = # FIX THIS DIFFICULTY TIME Field dropdown
