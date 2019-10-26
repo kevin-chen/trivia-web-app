@@ -8,7 +8,7 @@ import re
 TAG_RE = re.compile(r'<[^>]+>')
 
 def home(request):
-    req = 'http://jservice.io/api/random?count=12'
+    req = 'http://jservice.io/api/random?count=50'
     response = requests.get(req)
     trivia_set = response.json()
     content = []
@@ -21,14 +21,16 @@ def search(request):
     # Search Box
     if request.method == 'POST':
         form = CategoryForm(request.POST)
+        cate = "none"
+        diff = "easy"
         if form.is_valid():
             text = form.cleaned_data
             cate = text['category']
             diff = text['difficulty']
-        return HttpResponseRedirect('/search/' + (cate if cate!= "" else "none") + "/" + diff)
-    else:
-        form = CategoryForm()
+            print(text['time'].year)
+            return HttpResponseRedirect('/search/' + (cate if cate!= "" else "none") + "/" + diff)
 
+    form = CategoryForm()
     success = False
     content = []
     offset = ran.randint(0, 2000)
@@ -80,6 +82,9 @@ def search_trivia(request, cate, diff):
                     hardness = dict[diff]
                     if hardness:
                         clues_set += clue_question_set
+
+                    # Filter by Date
+
 
         offset += 100
 
