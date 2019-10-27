@@ -13,7 +13,7 @@ def home(request):
     trivia_set = response.json()
     content = []
     for trivia in trivia_set:
-        dict = { 'id': trivia['id'], 'question' : trivia['question'], 'answer' : TAG_RE.sub('', trivia['answer']), 'category' : trivia['category']['title'] }
+        dict = { 'id': trivia['id'], 'question' : trivia['question'], 'answer' : TAG_RE.sub('', trivia['answer']), 'category' : trivia['category']['title'], 'airdate' : trivia['airdate'][:10], 'value': trivia['value']}
         content.append(dict)
     return render(request, 'trivia/home.html', {'trivia' : content})
 
@@ -21,17 +21,16 @@ def search(request):
     # Search Box
     if request.method == 'POST':
         form = CategoryForm(request.POST)
-        cate = "none"
-        diff = "easy"
         if form.is_valid():
-            text = form.cleaned_data
-            cate = text['category']
-            diff = text['difficulty']
-            print(text['time'].year)
-            return HttpResponseRedirect('/search/' + (cate if cate!= "" else "none") + "/" + diff)
+            data = form.cleaned_data
+
+            cate = data['category'] if data['category']!= "" else None
+            diff = data['difficulty']
+            date = data['date'] if data['date'] != None else None
+
+            return search_trivia(request, cate, diff, date)
 
     form = CategoryForm()
-    success = False
     content = []
     offset = ran.randint(0, 2000)
     req = "http://jservice.io/api/categories?count=100" + "&offset=" + str(offset)
@@ -43,7 +42,7 @@ def search(request):
 
     return render(request, 'trivia/search.html', {'categories': content, 'form': form})
 
-def search_trivia(request, cate, diff):
+def search_trivia(request, cate, diff, date):
     content = []
     clues_set = []
     success = False
@@ -51,7 +50,7 @@ def search_trivia(request, cate, diff):
     # Show trivia questions by Category, Time, Difficulty (3 Loops)
     offset = 0
 
-    while True:  # Filter By Category
+    while True:
         req = "http://jservice.io/api/categories?count=100&offset=" + str(offset)
         response = requests.get(req)
         category_set = response.json()
@@ -64,14 +63,16 @@ def search_trivia(request, cate, diff):
             if category['title'] == None:
                 break
 
+            # Filter By Category
             # Add all the questions/clues from that category and append to larger list
-            elif (cate == "none") or (cate != "" and cate in category['title']):  # if there is no query or if there is a query
+            elif (cate == None) or (cate != "" and cate in category['title']):  # if there is no query or if there is a query
                 clue_req = "http://jservice.io/api/clues?category=" + str(category['id'])
                 clue_response = requests.get(clue_req)
                 clue_question_set = clue_response.json()
 
-                for clue in clue_question_set:  # Filter By Time, loop through content
+                for clue in clue_question_set: # Loop through all the questions in one category
                     value = clue['value']
+                    airdate = clue['airdate']
                     if value == None:
                         continue
 
@@ -80,26 +81,23 @@ def search_trivia(request, cate, diff):
                             'medium': 400 < value <= 800,
                             'hard': 800 < value <= 1000}
                     hardness = dict[diff]
-                    if hardness:
-                        clues_set += clue_question_set
 
                     # Filter by Date
+                    timeframe = True if (date == None) or (airdate == str(date)+"T12:00:00.000Z") else False # if there is no date or the date matches exactly, add it
 
+                    if hardness and timeframe: # only if it meets difficulty requirements and timeframe requirements
+                        clues_set += clue_question_set
 
         offset += 100
-
-    for clue in clues_set: # Filter By Difficulty, loop through content
-        pass
-
 
     if len(clues_set) != 0:
         success = True
 
     for clue in clues_set:
-        dict = {'id': clue['id'], 'question': clue['question'], 'answer': TAG_RE.sub('', clue['answer']), 'category':clue['category']['title']}
+        dict = {'id': clue['id'], 'question': clue['question'], 'answer': TAG_RE.sub('', clue['answer']), 'category':clue['category']['title'], 'airdate' : clue['airdate'][:10], 'value': clue['value']}
         content.append(dict)
 
-    print(content) # content = {clue num, question, answer, category title}
+    # print(content) # content = {clue num, question, answer, category title}
 
     return render(request, 'trivia/trivia.html', {'trivia': content, 'title' : cate, 'success' : success})
 
@@ -111,7 +109,7 @@ def category_trivia(request, id='11510'):
     title = set['title']
     content = []
     for clue in question_set:
-        dict = {'id': clue['id'], 'question': clue['question'], 'answer': TAG_RE.sub('', clue['answer'])}
+        dict = {'id': clue['id'], 'question': clue['question'], 'answer': TAG_RE.sub('', clue['answer']), 'airdate': clue['airdate'][:10], 'value': clue['value']}
         content.append(dict)
     return render(request, 'trivia/trivia.html', {'trivia' : content, 'title' : title, 'success': True})
 

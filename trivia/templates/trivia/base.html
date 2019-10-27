@@ -3,10 +3,6 @@
 <html lang="en">
 
     <head>
-        <!-- Icon Picture and CSS Stylesheet-->
-        <link rel="icon" href="https://images-na.ssl-images-amazon.com/images/I/51Nf7DSjczL.png">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,11 +14,12 @@
         <meta name="generator" content="Jekyll v3.8.5">
 
         <!-- Bootstrap CSS -->
+        <link rel="icon" href="https://images-na.ssl-images-amazon.com/images/I/51Nf7DSjczL.png">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/pricing/">
 
         <!-- Main CSS -->
-        <link rel="stylesheet" type="css" href="{% static 'trivia/app.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'trivia/main.css' %}">
 
         <!-- Title -->
         {% if title %}
@@ -32,83 +29,13 @@
         {% endif %}
     </head>
 
-    <style>
-        .flip-card {
-          background-color: transparent;
-          width: 300px;
-          height: 300px;
-          perspective: 1000px;
-        }
-
-        .flip-card-inner {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          text-align: center;
-          transition: transform 0.6s;
-          transform-style: preserve-3d;
-          <!--box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);-->
-        }
-
-        @media(hover: hover) {
-            .flip-card:hover .flip-card-inner {
-          transform: rotateY(180deg);
-            }
-        }
-
-        @media(hover: none) {
-            .flip-card:active .flip-card-inner {
-          transform: rotateY(180deg);
-            }
-        }
-
-        .flip-card-front, .flip-card-back {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          backface-visibility: hidden;
-          font-style: normal;
-          font-size: 19px;
-          font-family: cursive;
-        }
-
-        .flip-card-front {
-          background-color: transparent;
-          color: black;
-        }
-
-        .flip-card-back {
-          background-color: transparent;
-          color: black;
-          transform: rotateY(180deg);
-        }
-
-        .cursive {
-            font-style: normal;
-            font-size: 19px;
-            font-family: cursive;
-        }
-
-        .outer {
-          margin-left: 200px;
-            margin-right: 50px;
-        }
-
-        ul {
-          columns: 2;
-          -webkit-columns: 2;
-          -moz-columns: 2;
-        }
-
-    </style>
-
     <body>
 
         <!-- Navigation Header -->
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
             <a href="{% url 'trivia-home' %}"><img src="https://img.icons8.com/plasticine/100/000000/questions.png" style="width:50px; height:60px"></a>
             <h5 class="my-0 mr-md-auto font-weight-normal"><strong>Trivia Me This</strong></h5>
-                <nav class="my-2 my-md- mr-md-3">
+                <nav class="my-2 my-md- mr-md-4">
                     <!--<a class="p-2 text-dark" href="{% url 'trivia-home' %}">Random Trivia</a>-->
                     <a class="p-2 text-dark" href="{% url 'trivia-search' %}">Search for Trivia</a>
                 </nav>
@@ -135,7 +62,9 @@
             <footer class="pt-4 my-md-5 pt-md-5 border-top">
                 <div class="row">
                     <div class="col-12 col-md">
-                        <small class="d-block mb-3 text-muted">&copy; Kevin Chen 2019</small>
+                        <small class="d-block mb-3 text-muted"> &copy; Kevin Chen 2019 </small>
+                        <small class="d-block mb-3 text-muted"> Capital One Web Application </small>
+                        <small class="d-block mb-3 text-muted"> Built with JService </small>
                     </div>
                 </div>
             </footer>

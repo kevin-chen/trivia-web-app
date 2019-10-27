@@ -12,7 +12,7 @@
     <!-- Cards -->
     <div class="card-columns mb-3 text-center">
         {% for triv in trivia %}
-            <div class="card border-dark mb-3">
+            <div class="card border-dark mb-3" style="border-radius: 15px">
                 <div class="card-header">
                     <h4 class="my-0 font-weight-normal">Trivia #{{ triv.id }}</h4>
                 </div>
@@ -23,6 +23,24 @@
                         <strong>Category:</strong>
                         <br>
                         {{ triv.category}}
+                    </div>
+
+                    <br>
+
+                    <!-- Date -->
+                    <div class="cursive">
+                        <strong>Airdate:</strong>
+                        <br>
+                        {{ triv.airdate}}
+                    </div>
+
+                    <br>
+
+                    <!-- Value -->
+                    <div class="cursive">
+                        <strong>Difficulty:</strong>
+                        <br>
+                        {{ triv.value}}
                     </div>
 
                     <br>
@@ -42,7 +60,6 @@
                             </div>
                         </div>
                     </div>
-
 
                     <form id="myForm">
                         <input class="btn btn-lg btn-block btn-outline-primary" type="button" value="Learn More" onclick="window.open('https://www.google.com/search?q={{triv.answer}}')" />
