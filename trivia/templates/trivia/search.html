@@ -23,9 +23,7 @@
         {% for category in categories %}
             <div class="card border-dark mb-3" style="border-radius: 15px">
                 <div class="card-body text-dark">
-                    <form action="/random" method="post">
-                        <a href="/category/{{category.id}}">{{category.title}}</a>
-                    </form>
+                    <a href="/category/{{category.id}}">{{category.title}}</a>
                 </div>
             </div>
 

@@ -12,7 +12,7 @@
         {% if success %}
             <div class="alert alert-success alert-dismissible" role="alert">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong>Success!</strong> Found Category for {{title}}
+                <strong>Success!</strong> Found Trivia for {{title}}
             </div>
         {% endif %}
     </div>
@@ -31,27 +31,27 @@
                     <div class="cursive">
                         <strong>Category:</strong>
                         <br>
-                        {{ triv.category }}
+                        <a href="/category/{{triv.category_id}}">{{ triv.category }}</a>
                     </div>
 
                     <br>
 
-                    <!-- Date -->
+                    <!-- Airdate -->
                     <div class="cursive">
                         <strong>Airdate:</strong>
                         <br>
-                        {{ triv.airdate}}
+                        <a href="/airdate/{{triv.airdate}}">{{ triv.airdate }}</a>
+
                     </div>
 
                     <br>
 
                     <!-- Value -->
                     <div class="cursive">
-                        <strong>Airdate:</strong>
+                        <strong>Difficulty:</strong>
                         <br>
-                        {{ triv.value}}
+                        <a href="/difficulty/{{triv.value}}">{{ triv.value }}</a>
                     </div>
-
 
                     <br>
 
