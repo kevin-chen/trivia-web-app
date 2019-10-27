@@ -6,11 +6,16 @@
 
          <!-- Searching-->
         <h5 class="display-4">Search for a Trivia:</h5>
-        <form action="/search/" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-outline-primary" type="submit">Submit</button>
+
+        <form autocomplete="off" method="post">
+          <div class="autocomplete" style="width:300px;">
+              {% csrf_token %}
+              {{ form.as_p }}
+          </div>
+          <button class="btn btn-outline-primary" type="submit">Submit</button>
         </form>
+
+
 
         <br>
 
@@ -28,8 +33,7 @@
             </div>
 
         {% endfor %}
-    </div>
-
+        </div>
 
     </div>
 

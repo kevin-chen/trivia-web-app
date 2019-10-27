@@ -1,4 +1,6 @@
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseNotFound
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 from django.shortcuts import render
 from trivia.forms import CategoryForm
 import requests
@@ -28,7 +30,7 @@ def search(request):
             data = form.cleaned_data
 
             cate = data['category'] if data['category']!= "" else None
-            diff = data['difficulty']
+            diff = data['difficulty'] if data['difficulty']!= "" else None
             from_date = data['from_date'] if data['from_date'] != None else datetime.date(1966, 1, 1)
             to_date = data['to_date'] if data['to_date'] != None else datetime.date(2011, 12, 12)
 
@@ -53,18 +55,18 @@ def search_trivia(request, cate, diff, date):
 
     # Show trivia questions by Category, Time, Difficulty (3 Loops)
     offset = 0
-
+    cates = []
     while True:
-        print(len(clues_set))
         req = "http://jservice.io/api/categories?count=100&offset=" + str(offset)
         response = requests.get(req)
         category_set = response.json()
 
-        if offset >= 10000: # change to get more categories
+        if offset >= 1000: # change to get more categories
             break
 
         # Find right category
         for category in category_set:
+            cates.append(category['title'])
             if category['title'] == None:
                 break
 
@@ -86,22 +88,24 @@ def search_trivia(request, cate, diff, date):
                     dict = {'easy': 0 < value <= 400,
                             'medium': 400 < value <= 800,
                             'hard': 800 < value <= 1000,
-                            None : False}
+                            None : True}
                     hardness = dict[diff]
 
                     # Filter by Date
                     # timeframe = True if (date == None) or (airdate == str(date)+"T12:00:00.000Z") else False # if there is no date or the date matches exactly, add it
-                    print(date[0], airdate, date[1], "is", date[0] <= airdate <= date[1])
                     timeframe = date[0] <= airdate <= date[1]
 
                     if hardness and timeframe: # only if it meets difficulty requirements and timeframe requirements
-                        print("ADDED", value, "and", airdate)
                         clues_set.append(clue)
 
         offset += 100
 
     if len(clues_set) != 0:
         success = True
+    print("Done")
+
+    f = open("all_categories.txt", "w")
+    f.write(str(cates))
 
     for clue in clues_set:
         dict = {'id': clue['id'], 'question': clue['question'], 'answer': TAG_RE.sub('', clue['answer']),
@@ -157,5 +161,15 @@ def random(request):
                'success': True}
     return render(request, 'trivia/random.html', context)
 
+def error_404(request, exception):
+    response = render(request, 'trivia/404.html', )
+    response.status_code = 404
+    return response
+
+def error_500(request):
+    response = render(request, 'trivia/404.html', )
+    response.status_code = 500
+    return response
+
 def game(request):
-    pass
+    return render(request, 'trivia/game.html')

@@ -21,3 +21,6 @@ urlpatterns = [
     # path('trivia/', include('trivia.urls')),
     path('', include('trivia.urls')),
 ]
+
+handler404 = 'trivia.views.error_404'
+handler500 = 'trivia.views.error_500'

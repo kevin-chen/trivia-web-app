@@ -21,8 +21,6 @@
         <!-- Main CSS -->
         <link rel="stylesheet" type="text/css" href="{% static 'trivia/css/main.css' %}">
 
-        <!-- JavaScript -->
-
         <!-- Title -->
         {% if title %}
             <title>Trivia Me This - {{title}}</title>
@@ -73,5 +71,8 @@
             </footer>
         </div>
 
+        <!-- JavaScript -->
+        <script type="text/javascript" src="{% static 'trivia/js/search.js' %}"></script>
+        <script type="text/javascript" src="{% static 'trivia/js/games.js' %}"></script>
     </body>
 </html>
