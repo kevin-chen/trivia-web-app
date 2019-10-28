@@ -61,7 +61,7 @@ def search_trivia(request, cate, diff, date):
         response = requests.get(req)
         category_set = response.json()
 
-        if offset >= 1000: # change to get more categories
+        if offset >= 10000: # change to get more categories
             break
 
         # Find right category
@@ -102,7 +102,6 @@ def search_trivia(request, cate, diff, date):
 
     if len(clues_set) != 0:
         success = True
-    print("Done")
 
     f = open("all_categories.txt", "w")
     f.write(str(cates))
