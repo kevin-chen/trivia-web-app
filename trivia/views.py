@@ -46,7 +46,7 @@ def search(request):
         dict = {'title': category['title'], 'id': category['id']}
         content.append(dict)
 
-    return render(request, 'trivia/search.html', {'categories': content, 'form': form})
+    return render(request, 'trivia/search.html', {'categories': content, 'form': form, 'titleBar' : "Search"})
 
 def search_trivia(request, cate, diff, date):
     content = []
@@ -113,7 +113,7 @@ def search_trivia(request, cate, diff, date):
                 'category_id': clue['category_id']}
         content.append(dict)
 
-    return render(request, 'trivia/trivia.html', {'trivia': content, 'title' : cate, 'success' : success})
+    return render(request, 'trivia/trivia.html', {'trivia': content, 'title' : cate, 'success' : success, 'titleBar' : cate})
 
 def category_trivia(request, id='11510'):
     req = "http://jservice.io/api/category?id="+id
@@ -126,7 +126,7 @@ def category_trivia(request, id='11510'):
         dict = {'id': clue['id'], 'question': clue['question'], 'answer': TAG_RE.sub('', clue['answer']), 'airdate': clue['airdate'][:10], 'value': clue['value'],
                 'category_id' : set['id'], 'category': set['title']}
         content.append(dict)
-    return render(request, 'trivia/trivia.html', {'trivia' : content, 'title' : title, 'success': True})
+    return render(request, 'trivia/trivia.html', {'trivia' : content, 'title' : title, 'success': True, 'titleBar' : "Category"})
 
 def difficulty_trivia(request, id='200'):
     req = "http://jservice.io/api/clues?value="+id
@@ -137,7 +137,7 @@ def difficulty_trivia(request, id='200'):
         dict = {'id': clue['id'], 'question': clue['question'], 'answer': TAG_RE.sub('', clue['answer']), 'airdate': clue['airdate'][:10], 'value': clue['value'],
                 'category_id' : clue['category']['id'], 'category': clue['category']['title']}
         content.append(dict)
-    return render(request, 'trivia/trivia.html', {'trivia' : content, 'title' : "Difficulty of "+id, 'success': True})
+    return render(request, 'trivia/trivia.html', {'trivia' : content, 'title' : "Difficulty of "+id, 'success': True, 'titleBar' : "Difficulty"})
 
 def airdate_trivia(request, id='2018-01-01'):
     req = "http://jservice.io/api/clues?min_date="+id+"T12:00:00.000Z&max_date="+id+"T12:00:00.000Z"
@@ -148,7 +148,7 @@ def airdate_trivia(request, id='2018-01-01'):
         dict = {'id': clue['id'], 'question': clue['question'], 'answer': TAG_RE.sub('', clue['answer']), 'airdate': clue['airdate'][:10], 'value': clue['value'],
                 'category_id' : clue['category']['id'], 'category': clue['category']['title']}
         content.append(dict)
-    return render(request, 'trivia/trivia.html', {'trivia' : content, 'title' : id, 'success': True})
+    return render(request, 'trivia/trivia.html', {'trivia' : content, 'title' : id, 'success': True, 'titleBar' : "Airdate"})
 
 def random(request):
     req = 'http://jservice.io/api/random'
@@ -172,4 +172,4 @@ def error_500(request):
     return response
 
 def game(request):
-    return render(request, 'trivia/game.html')
+    return render(request, 'trivia/game.html', {'titleBar' : 'Game'})

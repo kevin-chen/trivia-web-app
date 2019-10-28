@@ -14,7 +14,7 @@
         <meta name="generator" content="Jekyll v3.8.5">
 
         <!-- Bootstrap CSS -->
-        <link rel="icon" href="https://images-na.ssl-images-amazon.com/images/I/51Nf7DSjczL.png">
+        <link rel="icon" href="https://think.bouncex.com/wp-content/uploads/2017/04/Pink-Question-Mark.png">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/pricing/">
 
@@ -22,8 +22,8 @@
         <link rel="stylesheet" type="text/css" href="{% static 'trivia/css/main.css' %}">
 
         <!-- Title -->
-        {% if title %}
-            <title>Trivia Me This - {{title}}</title>
+        {% if titleBar %}
+            <title>Trivia Me This - {{titleBar}}</title>
         {% else %}
             <title>Trivia Me This</title>
         {% endif %}
@@ -64,9 +64,13 @@
                 <div class="row">
                     <div class="col-12 col-md">
                         <small class="d-block mb-3 text-muted"> &copy; Kevin Chen 2019 </small>
-                        <small class="d-block mb-3 text-muted"> Capital One Jeopardy Web Application </small>
                         <small class="d-block mb-3 text-muted"> Built with JService, Django, HTML, CSS </small>
+                        <small class="d-block mb-3 text-muted"> Capital One Jeopardy Web Application </small>
                     </div>
+                </div>
+                <div style="width:300px; margin:0 auto;">
+                    <!-- <audio src="{% static 'trivia/assets/theme.mp3' %}" preload="auto" loop="true" controls autobuffer></audio>-->
+                    <audio src="{% static 'trivia/assets/theme.mp3' %}" controls></audio>
                 </div>
             </footer>
         </div>

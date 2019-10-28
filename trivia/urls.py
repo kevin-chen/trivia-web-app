@@ -8,5 +8,5 @@ urlpatterns = [
     path('airdate/<id>', views.airdate_trivia, name='trivia-airdate'),
     path('difficulty/<id>', views.difficulty_trivia, name='trivia-difficulty'),
     path('game/', views.game, name='trivia-game'),
-    path('random', views.random, name='trivia-random') # first ever page
+    path('random/', views.random, name='trivia-random') # first ever page
 ]
