@@ -1,8 +1,7 @@
 # Trivia Me This
+Capital One Winter Summit
 
 <p align="center">
-  Capital One Winter Summit
-  <br>
   <img align="center" src="trivia/static/trivia/assets/co.png" width=400><br>
 </p>
 
