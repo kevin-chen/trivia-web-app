@@ -5,9 +5,9 @@ Capital One Winter Summit
   <img align="center" src="trivia/static/trivia/assets/co.png" width=400><br>
 </p>
 
-<!-- Link to depolyed website: http://trivia.kev-chen.me/ -->
+Link to depolyed website: http://trivia.kev-chen.me/
 
-<!-- Link to GitHub repository: https://github.com/kevin-chen/trivia-web-app -->
+Link to GitHub repository: https://github.com/kevin-chen/trivia-web-app
 
 ## Prompt
 
