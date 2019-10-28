@@ -1,8 +1,7 @@
 # Trivia Me This
 
-Capital One Winter Summit
-
 <p align="center">
+  Capital One Winter Summit
   <img align="center" src="trivia/static/trivia/assets/co.png" width=400><br>
 </p>
 
@@ -73,34 +72,48 @@ Here's a walkthrough of implemented user functions:
 
 ## Features
 
-Home Page
+### Home Page
 
 <img src="trivia/static/trivia/assets/Features/homepage.png" width=800><br>
 
-Game Page
+### Game Page
 
 <img src="trivia/static/trivia/assets/Features/gamepage.png" width=800><br>
 
-Search Page
+### Search Page
 
 <img src="trivia/static/trivia/assets/Features/searchpage.png" width=800><br>
 
-Search Results
+### Search Results
 
 <img src="trivia/static/trivia/assets/Features/searchresults.png" width=800><br>
 
 ## Journey
 
+### First
+
 <img src="trivia/static/trivia/assets/Journey/first.gif" width=800><br>
+
+### Second
 
 <img src="trivia/static/trivia/assets/Journey/second.gif" width=800><br>
 
+### Third
+
 <img src="trivia/static/trivia/assets/Journey/third.gif" width=800><br>
+
+### Fourth
 
 <img src="trivia/static/trivia/assets/Journey/fourth.png" width=800><br>
 
+### Fifth
+
 <img src="trivia/static/trivia/assets/Journey/fifth.png" width=800><br>
 
+### Sixth
+
 <img src="trivia/static/trivia/assets/Journey/sixth.png" width=800><br>
+
+### Seventh
 
 <img src="trivia/static/trivia/assets/Journey/seventh.png" width=800><br>
