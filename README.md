@@ -10,7 +10,7 @@ To complete this challenge, build a web application that:
   * trivia category
   * level of difficulty of the question
   * any other smart searching criteria you see fit
-
+l
 Optional: You may want to include these bonus features:
 
 * Game board simulation with the categories and questions in the proper place (as it would be organized in the game with easier questions on top)

@@ -50,7 +50,7 @@ function gameOn () {
                 successText.setAttribute("data-dismiss", "alert");
                 successText.setAttribute("aria-label", "close");
                 successText.innerHTML = "&times;";
-                successBanner.innerHTML = "Incorrect!";
+                successBanner.innerHTML = "Incorrect! Answer: " + answer;
                 successBanner.appendChild(successText);
                 playField.appendChild(successBanner);
             }
