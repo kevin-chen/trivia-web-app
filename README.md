@@ -68,7 +68,7 @@ In order to search through the many categories that JService provides, the appli
 
 Here's a walkthrough of implemented user functions:
 
-<img src="trivia/static/trivia/assets/Features/overview.gif" width=400><br>
+<img src="trivia/static/trivia/assets/Features/overview.gif" width=800><br>
 
 ## Features
 
