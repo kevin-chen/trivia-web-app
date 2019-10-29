@@ -57,7 +57,7 @@ def search_trivia(request, cate, diff, date):
     # Show trivia questions by Category, Time, Difficulty (3 Loops)
     offset = 0
     cates = []
-    is_blank = (cate == None and diff == None)
+    is_blank = (cate == None)
     
     while True:
         req = "http://jservice.io/api/categories?count=100&offset=" + str(offset)
