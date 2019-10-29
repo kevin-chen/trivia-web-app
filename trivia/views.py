@@ -167,7 +167,7 @@ def error_404(request, exception):
     return response
 
 def error_500(request):
-    response = render(request, 'trivia/404.html', {'titleBar' : "Page Not Working"})
+    response = render(request, 'trivia/500.html', {'titleBar' : "Page Not Working"})
     response.status_code = 500
     return response
 
