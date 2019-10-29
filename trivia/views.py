@@ -62,7 +62,7 @@ def search_trivia(request, cate, diff, date):
         response = requests.get(req)
         category_set = response.json()
 
-        if offset >= 10000: # change to get more categories
+        if offset >= 1000: # change to get more categories
             break
 
         # Find right category
