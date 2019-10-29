@@ -62,12 +62,13 @@ The following **bonus** stretch features are implemented:
 - [X] Specific trivia questions by category, airdate, and difficulty
 - [X] UI Design (Flipping Cards)
 - [X] Learn more button for each trivia card
+- [X] Custom URL and 404 Not Found / 500 Internal Server Error
 
 ## Future Features
 
 - [ ] Make menu options more asthetic
 - [ ] Make website more dynamic in other platforms (mobile and web)
-- [ ] Improve searching algorithm
+- [ ] Improve searching algorithm for faster results
 
 ## Searching Algorithm:
 
