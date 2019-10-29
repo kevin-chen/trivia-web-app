@@ -26,8 +26,6 @@ Optional: You may want to include these bonus features:
 * Game board simulation with the categories and questions in the proper place (as it would be organized in the game with easier questions on top)
 * Marking or saving questions into a "favorites" collection
 
-Time spent: **15** hours spent in total
-
 ## Tech Stack
 
 ### Front-End
@@ -46,6 +44,8 @@ Time spent: **15** hours spent in total
 * Requests to parse JSON data
 
 ## Implemented Features
+
+Time spent: **15** hours spent in total
 
 The following **required** functionality is completed:
 
