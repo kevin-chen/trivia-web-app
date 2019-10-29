@@ -79,6 +79,14 @@ In order to search through the many categories that JService provides, the appli
 
 * JavaScript to develop a small trivia game, control audio features, and provide support for category search dropdown
 
+## Challenges
+
+* Parsing API data from JService in an efficient manner
+* Passing data from one page to another using Django forms
+* Styling flipping cards for each trivia question/clue
+* Dynamic sizing for various pages and elements
+* Implementing automatic dropdown for category searches
+
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user functions:
@@ -132,3 +140,13 @@ Here's a walkthrough of implemented user functions:
 ### Seventh
 
 <img src="trivia/static/trivia/assets/Journey/seventh.png" width=800><br>
+
+## License
+
+Copyright 2019 Kevin Chen
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+[http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0 "Apache License")
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
