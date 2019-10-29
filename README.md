@@ -28,6 +28,23 @@ Optional: You may want to include these bonus features:
 
 Time spent: **15** hours spent in total
 
+## Tech Stack
+
+### Front-End
+
+* HTML/CSS
+* Bootstrap
+* JavaScript
+
+### Back-End
+
+* Python/Django
+
+### APIs
+
+* JService API for trivia information
+* Requests to parse JSON data
+
 ## User Features
 
 The following **required** functionality is completed:
@@ -55,8 +72,6 @@ The following **bonus** features are implemented:
 ## Searching Algorithm:
 
 In order to search through the many categories that JService provides, the application first searches through all the possible categories using the /Categories endpoint with a HTTP Request to get JSON trivia information from JService. While the program is searching through each matching category, it looks through the questions/clues of that category for other search filters such as date/timeframe aired and level of difficulty. If these criteria are a match, the clues are appended to a list which would be displayed on the search results page.
-
-# Technologies Utilized
 
 * Python and the web framework, Django to organize the project, redirect between pages, send requests with the JService endpoint, filter trivia questions by category, airdate, and level of difficulty
 
