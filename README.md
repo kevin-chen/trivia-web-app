@@ -1,8 +1,8 @@
 # Trivia Me This
-Capital One Winter Summit
+## Capital One Winter 2020 Software Engineering Summit
 
 <p align="center">
-  <img align="center" src="trivia/static/trivia/assets/co.png" width=400><br>
+  <img align="center" src="trivia/static/trivia/assets/co.png" width=600><br>
 </p>
 
 Link to depolyed website: http://trivia.kev-chen.me/
@@ -45,14 +45,14 @@ Time spent: **15** hours spent in total
 * JService API for trivia information
 * Requests to parse JSON data
 
-## User Features
+## Implemented Features
 
 The following **required** functionality is completed:
 
 - [X] Searching page with search function displayed search results page
 - [X] Ability to search with filters (category, airdate, difficulty)
 
-The following **bonus** features are implemented:
+The following **bonus** stretch features are implemented:
 
 - [X] Audio background music
 - [X] Trivia game with scorekeeping
