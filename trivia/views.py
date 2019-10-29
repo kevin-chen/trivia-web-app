@@ -8,6 +8,7 @@ import random as ran
 import re
 import datetime
 
+# To remove HTML markup in displaying results
 TAG_RE = re.compile(r'<[^>]+>')
 
 def home(request):
