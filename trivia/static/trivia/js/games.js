@@ -7,12 +7,10 @@ var success = false;
 
 function gameOn () {
 
-    console.log("HELLO")
-
     if (playing) {
         let  userAnswer= document.getElementById('guess').value
         console.log(answer.includes(userAnswer))
-        if (answer.includes(userAnswer)) {
+        if (userAnswer!= "" && answer.includes(userAnswer)) {
             score += 1
             success = true;
         }
@@ -39,7 +37,7 @@ function gameOn () {
                 successText.setAttribute("data-dismiss", "alert");
                 successText.setAttribute("aria-label", "close");
                 successText.innerHTML = "&times;";
-                successBanner.innerHTML = "Correct!";
+                successBanner.innerHTML = "Correct! Answer: " + answer;
                 successBanner.appendChild(successText);
                 playField.appendChild(successBanner);
             }
