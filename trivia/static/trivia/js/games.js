@@ -10,9 +10,9 @@ function gameOn () {
     console.log("HELLO")
 
     if (playing) {
-        let  userAnswer= document.getElementById('guess')
-        console.log(answer.includes(document.getElementById('guess').value))
-        if (true) {
+        let  userAnswer= document.getElementById('guess').value
+        console.log(answer.includes(userAnswer))
+        if (answer.includes(userAnswer)) {
             score += 1
             success = true;
         }
