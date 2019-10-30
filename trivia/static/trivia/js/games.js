@@ -7,10 +7,14 @@ var success = false;
 
 function gameOn () {
 
-    if (playing) {
-        let userAnswer = document.getElementById('guess')
-        if (answer.includes(userAnswer.value) && !answer.includes("")) {
+    console.log("HELLO")
+
+    if (true) {
+//        let  userAnswer= document.getElementById('guess')
+        console.log(answer.includes(document.getElementById('guess').value))
+        if (true) {
             score += 1
+            success = true;
         }
         questionNum += 1
     }
@@ -104,7 +108,7 @@ function gameOn () {
             playField.appendChild(submitButton);
 
             playing = true;
-
+            success = false;
 
             setTimeout(function() {
                 $(".alert").alert('close');

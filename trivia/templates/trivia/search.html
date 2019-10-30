@@ -8,10 +8,11 @@
         <h5 class="display-4">Search for a Trivia:</h5>
 
         <form autocomplete="off" method="post">
-          <div class="autocomplete" style="width:300px;">
+            <div class="autocomplete centering">
               {% csrf_token %}
               {{ form.as_p }}
-          </div>
+            </div>
+            <br>
           <button class="btn btn-outline-primary" type="submit">Submit</button>
         </form>
 

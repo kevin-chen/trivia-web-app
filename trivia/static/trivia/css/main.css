@@ -11,6 +11,10 @@
   margin-left: 200px;
   margin-right: 50px;
 }
+.centering {
+margin: 0 auto;
+width:250px;
+}
 
 /* Flipping Cards */
 .flip-card {
