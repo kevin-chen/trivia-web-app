@@ -9,8 +9,8 @@ function gameOn () {
 
     console.log("HELLO")
 
-    if (true) {
-//        let  userAnswer= document.getElementById('guess')
+    if (playing) {
+        let  userAnswer= document.getElementById('guess')
         console.log(answer.includes(document.getElementById('guess').value))
         if (true) {
             score += 1
