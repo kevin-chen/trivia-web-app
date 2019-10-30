@@ -57,12 +57,14 @@ def search_trivia(request, cate, diff, date):
     # Show trivia questions by Category, Time, Difficulty (3 Loops)
     offset = 0
     cates = []
+    is_blank = (cate == None)
+    
     while True:
         req = "http://jservice.io/api/categories?count=100&offset=" + str(offset)
         response = requests.get(req)
         category_set = response.json()
 
-        if offset >= 10000: # change to get more categories
+        if (is_blank and offset >= 100) or offset >= 1000: # prevent crashing with blank category
             break
 
         # Find right category
@@ -104,8 +106,8 @@ def search_trivia(request, cate, diff, date):
     if len(clues_set) != 0:
         success = True
 
-    f = open("all_categories.txt", "w")
-    f.write(str(cates))
+    # f = open("all_categories.txt", "w")
+    # f.write(str(cates))
 
     for clue in clues_set:
         dict = {'id': clue['id'], 'question': clue['question'], 'answer': TAG_RE.sub('', clue['answer']),
