@@ -60,7 +60,7 @@ The following **bonus** stretch features are implemented:
 - [X] Banner notifications (search successful, game response)
 - [X] Sample random trivia questions on homepage
 - [X] Specific trivia questions by category, airdate, and difficulty
-- [X] UI Design (Flipping Cards)
+- [X] UI Design (Flipping Cards) / Show Answer Button (no hover on mobile)
 - [X] Learn more button for each trivia card
 - [X] Custom URL and 404 Not Found / 500 Internal Server Error
 

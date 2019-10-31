@@ -62,10 +62,13 @@
                         </div>
                     </div>
 
+                    <form id="answer{{forloop.counter}}">
+                        <input class="btn btn-lg btn-block btn-outline-primary" type="button" value="Show Answer" onclick="displayAnswer('{{forloop.counter}}', '{{ triv.answer }}')" />
+                    </form>
+
                     <form id="myForm">
                         <input class="btn btn-lg btn-block btn-outline-primary" type="button" value="Learn More" onclick="window.open('https://www.google.com/search?q={{triv.answer}}')" />
                     </form>
-
                 </div>
             </div>
 

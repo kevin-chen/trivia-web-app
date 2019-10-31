@@ -1,3 +1,11 @@
+function displayAnswer(id, answer) {
+    let button = document.getElementById('answer'+id);
+    var newEl = document.createElement('p');
+    newEl.setAttribute('style', 'font-family: American Typewriter');
+    newEl.innerHTML = answer;
+    button.parentNode.replaceChild(newEl, button);
+}
+
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
