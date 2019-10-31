@@ -7,7 +7,7 @@
          <!-- Searching-->
         <h5 class="display-4">Search for a Trivia:</h5>
 
-        <form autocomplete="off" method="post">
+        <form autocomplete="off" action="/search/" method="post">
             <div class="autocomplete centering">
               {% csrf_token %}
               {{ form.as_p }}

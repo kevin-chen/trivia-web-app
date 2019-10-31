@@ -64,7 +64,7 @@ def search_trivia(request, cate, diff, date):
         response = requests.get(req)
         category_set = response.json()
 
-        if (is_blank and offset >= 100) or offset >= 1000: # prevent crashing with blank category
+        if (is_blank and offset >= 1000) or offset >= 10000: # prevent crashing with blank category
             break
 
         # Find right category
