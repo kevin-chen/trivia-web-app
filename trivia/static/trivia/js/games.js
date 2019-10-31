@@ -10,7 +10,7 @@ function gameOn () {
     if (playing) {
         let  userAnswer= document.getElementById('guess').value
         console.log(answer.includes(userAnswer))
-        if (userAnswer!= "" && answer.includes(userAnswer)) {
+        if (userAnswer!= "" && answer === userAnswer) {
             score += 1
             success = true;
         }
