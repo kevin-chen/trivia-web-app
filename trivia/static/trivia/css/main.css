@@ -32,15 +32,14 @@ width:250px;
   transform-style: preserve-3d;
   <!--box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);-->
 }
-@media(hover: hover) {
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
     .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+        transform: rotateY(180deg);
     }
 }
-@media(hover: none) {
-    .flip-card:active .flip-card-inner {
-  transform: rotateY(180deg);
-    }
+@media(hover: hover) {
+
 }
 .flip-card-front, .flip-card-back {
   position: absolute;
