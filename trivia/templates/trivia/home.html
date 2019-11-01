@@ -37,11 +37,15 @@
 
                     <br>
 
-                    <!-- Value -->
+                     <!-- Value -->
                     <div class="cursive">
                         <strong>Difficulty:</strong>
                         <br>
-                        <a href="/difficulty/{{triv.value}}">{{ triv.value }}</a>
+                        {% if triv.value %}
+                            <a href="/difficulty/{{triv.value}}">{{ triv.value }}</a>
+                        {% else %}
+                            <a>{{ triv.value }}</a>
+                        {% endif %}
                     </div>
 
                     <br>

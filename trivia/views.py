@@ -56,7 +56,6 @@ def search_trivia(request, cate, diff, date):
 
     # Show trivia questions by Category, Time, Difficulty (3 Loops)
     offset = 0
-    cates = []
     is_blank = (cate == None)
     
     while True:
@@ -69,7 +68,6 @@ def search_trivia(request, cate, diff, date):
 
         # Find right category
         for category in category_set:
-            cates.append(category['title'])
             if category['title'] == None:
                 break
 
@@ -105,9 +103,6 @@ def search_trivia(request, cate, diff, date):
 
     if len(clues_set) != 0:
         success = True
-
-    # f = open("all_categories.txt", "w")
-    # f.write(str(cates))
 
     for clue in clues_set:
         dict = {'id': clue['id'], 'question': clue['question'], 'answer': TAG_RE.sub('', clue['answer']),
