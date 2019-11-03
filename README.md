@@ -7,6 +7,8 @@
 
 Link to depolyed website: http://trivia.kev-chen.me
 
+Heroku depolyment: https://trivia-capital-one.herokuapp.com/
+
 Link to GitHub repository: https://github.com/kevin-chen/trivia-web-app
 
 ## Prompt
