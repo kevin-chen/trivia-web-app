@@ -7,9 +7,11 @@
 
 Link to depolyed website: http://trivia.kev-chen.me
 
-Heroku depolyment: https://trivia-capital-one.herokuapp.com/
+Link to Heroku depolyment: https://trivia-capital-one.herokuapp.com/
 
 Link to GitHub repository: https://github.com/kevin-chen/trivia-web-app
+
+Link to challenge: https://www.mindsumo.com/contests/jeopardy-api
 
 ## Prompt
 
